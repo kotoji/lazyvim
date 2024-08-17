@@ -71,7 +71,7 @@ return {
     },
     enabled = true,
     opts = {
-      debug_mode = true,
+      debug_mode = false,
     },
     config = function(_, options)
       vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
