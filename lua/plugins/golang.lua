@@ -99,6 +99,7 @@ return {
         nls.builtins.formatting.goimports,
         nls.builtins.formatting.gofumpt,
       })
+      return opts
     end,
   },
   {

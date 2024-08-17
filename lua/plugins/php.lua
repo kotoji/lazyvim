@@ -21,19 +21,19 @@ return {
     end,
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    opts = function()
+    "nvimtools/none-ls.nvim",
+    opts = function(_, opts)
       local nls = require("null-ls")
-      return {
-        sources = {
-          nls.builtins.formatting.blade_formatter,
-          nls.builtins.diagnostics.phpstan.with({
-            extra_args = {
-              "--memory-limit=2G",
-            },
-          }),
-        },
+      local sources = {
+        nls.builtins.formatting.blade_formatter,
+        nls.builtins.diagnostics.phpstan.with({
+          extra_args = {
+            "--memory-limit=2G",
+          },
+        }),
       }
+      opts.sources = vim.list_extend(opts.sources or {}, sources)
+      return opts
     end,
   },
   {
