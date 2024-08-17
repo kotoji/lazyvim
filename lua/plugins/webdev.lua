@@ -1,11 +1,5 @@
 -- original: https://github.com/jellydn/nvim-for-webdev/tree/main
 
--- disable lsp-inlayhints if that is nightly version, will remove when 0.10.0 is stable
-local enabled_inlay_hints = true
-if vim.fn.has("nvim-0.10.0") == 1 then
-  enabled_inlay_hints = false
-end
-
 return {
   -- Jsdoc
   {
@@ -17,6 +11,7 @@ return {
     },
     build = "make install",
   },
+
   -- Add Tailwind CSS LSP
   {
     "williamboman/mason.nvim",
@@ -74,7 +69,7 @@ return {
       "typescript.tsx",
       "svelte",
     },
-    enabled = enabled_inlay_hints,
+    enabled = true,
     opts = {
       debug_mode = true,
     },

@@ -102,3 +102,5 @@ kofi
 buymeacoffee
 phpstan
 intelephense
+lazyrepo
+getchar
