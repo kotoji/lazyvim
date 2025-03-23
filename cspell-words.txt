@@ -104,3 +104,16 @@ phpstan
 intelephense
 lazyrepo
 getchar
+clippy
+debuggables
+napi
+direnv
+venv
+codelldb
+lldb
+liblldb
+dylib
+rustaceanvim
+neotest
+Saecki
+mrcjkb
