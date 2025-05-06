@@ -57,7 +57,7 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
-      ensure_installed = { "codespell", "misspell", "cspell" },
+      ensure_installed = { "codespell", "cspell" },
     },
   },
   -- Set up null-ls to check spelling
@@ -80,7 +80,6 @@ return {
       local sources = {
         -- spell check
         b.diagnostics.codespell,
-        b.diagnostics.misspell,
         -- cspell
         cspell.diagnostics.with({
           -- Set the severity to HINT for unknown words
