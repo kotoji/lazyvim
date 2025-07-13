@@ -1,15 +1,19 @@
-local diagnostics = vim.g.lazyvim_rust_diagnostics or "rust-analyzer"
-
 return {
-  -- Correctly setup lspconfig for Rust 🚀
+  -- prevent nonsense diagnostics when async-trait is used
+  -- https://github.com/LazyVim/LazyVim/discussions/5638#discussioncomment-12228999
   {
-    "neovim/nvim-lspconfig",
+    "mrcjkb/rustaceanvim",
     opts = {
-      servers = {
-        bacon_ls = {
-          enabled = diagnostics == "bacon-ls",
+      server = {
+        default_settings = {
+          ["rust-analyzer"] = {
+            procMacro = {
+              ignored = {
+                ["async-trait"] = vim.NIL,
+              },
+            },
+          },
         },
-        rust_analyzer = { enabled = false },
       },
     },
   },
