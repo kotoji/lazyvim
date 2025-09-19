@@ -31,11 +31,9 @@ return {
                 rangeVariableTypes = true,
               },
               analyses = {
-                fieldalignment = true,
-                nilness = true,
-                unusedparams = true,
-                unusedwrite = true,
-                useany = true,
+                -- fieldalignment = true,
+                any = true,
+                ST1000 = false, -- Incorrect or missing package comment
               },
               usePlaceholders = true,
               completeUnimported = true,
