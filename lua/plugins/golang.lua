@@ -34,6 +34,9 @@ return {
                 -- fieldalignment = true,
                 any = true,
                 ST1000 = false, -- Incorrect or missing package comment
+                ST1020 = false, -- The documentation of an exported function should start with the function’s name
+                ST1021 = false, -- The documentation of an exported type should start with type’s name
+                -- ST1005 = false, -- Incorrectly formatted error string
               },
               usePlaceholders = true,
               completeUnimported = true,
