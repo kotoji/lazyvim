@@ -13,6 +13,7 @@ return {
       vim.g.nord_bold = false
     end,
   },
+  { "EdenEast/nightfox.nvim" },
 
   {
     "nvim-neo-tree/neo-tree.nvim",
