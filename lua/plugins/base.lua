@@ -14,15 +14,6 @@ return {
     end,
   },
 
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      --colorscheme = "nord",
-      colorscheme = "tokyonight-storm",
-    },
-  },
-
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
