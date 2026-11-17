@@ -57,7 +57,7 @@ return {
   {
     "mason-org/mason.nvim",
     opts = {
-      ensure_installed = { "codespell", "cspell" },
+      ensure_installed = { "cspell" },
     },
   },
   -- Set up null-ls to check spelling
@@ -78,8 +78,6 @@ return {
       local b = none_ls.builtins
 
       local sources = {
-        -- spell check
-        b.diagnostics.codespell,
         -- cspell
         cspell.diagnostics.with({
           -- Set the severity to HINT for unknown words
